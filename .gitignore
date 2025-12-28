@@ -45,3 +45,10 @@ __pycache__
 memory-profiles
 memory-baseline.json
 memory-analysis-report.html
+
+# Devenv
+.devenv
+.devenv-root
+.devenv.flake.nix
+devenv.local.nix
+devenv.lock

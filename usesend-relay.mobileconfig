@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <!-- ========================= -->
+  <!-- Mail Account Payload     -->
+  <!-- ========================= -->
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+
+      <!-- User-visible labels -->
+      <key>EmailAccountDescription</key>
+      <string>Meghan Howland Newsletter (UseSend)</string>
+
+      <key>EmailAccountName</key>
+      <string>Meghan Howland Newsletter</string>
+
+      <!-- THIS DEFINES THE "From:" ADDRESS -->
+      <key>EmailAddress</key>
+      <string>newsletter@list.meghanhow.land</string>
+
+      <!-- Account type -->
+      <key>EmailAccountType</key>
+      <string>EmailTypeIMAP</string>
+
+      <!-- ========================= -->
+      <!-- Incoming (IMAP – iCloud) -->
+      <!-- Required by iOS schema   -->
+      <!-- ========================= -->
+      <key>IncomingMailServerHostName</key>
+      <string>imap.mail.me.com</string>
+
+      <key>IncomingMailServerPortNumber</key>
+      <integer>993</integer>
+
+      <key>IncomingMailServerUseSSL</key>
+      <true/>
+
+      <key>IncomingMailServerAuthentication</key>
+      <string>EmailAuthPassword</string>
+
+      <key>IncomingMailServerUsername</key>
+      <string>alex.launi@icloud.com</string>
+
+      <!-- Prompt at install (use app-specific password if 2FA enabled) -->
+      <key>IncomingPassword</key>
+      <string></string>
+
+      <!-- ========================= -->
+      <!-- Outgoing (SMTP – UseSend) -->
+      <!-- ========================= -->
+      <key>OutgoingMailServerHostName</key>
+      <string>interchange.proxy.rlwy.net</string>
+
+      <key>OutgoingMailServerPortNumber</key>
+      <integer>17687</integer>
+
+      <!-- STARTTLS -->
+      <key>OutgoingMailServerUseSSL</key>
+      <true/>
+
+      <key>OutgoingMailServerAuthentication</key>
+      <string>EmailAuthPassword</string>
+
+      <key>OutgoingMailServerUsername</key>
+      <string>usesend</string>
+
+      <!-- Prompt at install -->
+      <key>OutgoingPassword</key>
+      <string></string>
+
+      <!-- ========================= -->
+      <!-- Payload Metadata         -->
+      <!-- ========================= -->
+      <key>PayloadType</key>
+      <string>com.apple.mail.managed</string>
+
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+
+      <key>PayloadIdentifier</key>
+      <string>net.meghanhowland.usesend.newsletter.mail</string>
+
+      <key>PayloadUUID</key>
+      <string>9B73C6A5-4D9E-4B8A-9D4A-5A8C3E7F1A01</string>
+
+      <key>PayloadDisplayName</key>
+      <string>UseSend Newsletter Mail Account</string>
+
+    </dict>
+  </array>
+
+  <!-- ========================= -->
+  <!-- Profile Metadata         -->
+  <!-- ========================= -->
+  <key>PayloadType</key>
+  <string>Configuration</string>
+
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+
+  <key>PayloadIdentifier</key>
+  <string>net.meghanhowland.usesend.newsletter.profile</string>
+
+  <key>PayloadUUID</key>
+  <string>3F2E9B6C-1A47-4D9E-8F6C-7B8D1C2A4E90</string>
+
+  <key>PayloadDisplayName</key>
+  <string>Meghan Howland Newsletter (UseSend)</string>
+
+  <key>PayloadOrganization</key>
+  <string>Meghan Howland</string>
+
+  <key>PayloadRemovalDisallowed</key>
+  <false/>
+
+</dict>
+</plist>
+
