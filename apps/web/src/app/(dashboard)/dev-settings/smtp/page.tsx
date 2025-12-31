@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   Card,
   CardContent,
@@ -8,11 +7,11 @@ import {
 } from "@usesend/ui/src/card";
 import { TextWithCopyButton } from "@usesend/ui/src/text-with-copy";
 import { env } from "~/env";
+import GenerateSmtpPassword from "./generate-smtp-password";
 
-export const dynamic = "force-dynamic";
-
-export default function ExampleCard() {
+export default function SmtpSettingsPage() {
   const host = env.SMTP_HOST;
+  const port = env.SMTP_PORT;
   const user = env.SMTP_USER;
 
   return (
@@ -29,17 +28,17 @@ export default function ExampleCard() {
           <div>
             <strong>Host:</strong>
             <TextWithCopyButton
-              className="ml-1 border bg-primary/10  rounded-lg mt-1 p-2 w-full "
+              className="ml-1 border bg-primary/10 rounded-lg mt-1 p-2 w-full"
               value={host}
-            ></TextWithCopyButton>
+            />
           </div>
           <div>
             <strong>Port:</strong>
             <TextWithCopyButton
               className="ml-1 rounded-lg mt-1 p-2 w-full bg-primary/10 font-mono"
-              value={"465"}
-            ></TextWithCopyButton>
-            <p className="ml-1 mt-1 text-zinc-500 text-sm ">
+              value={String(port)}
+            />
+            <p className="ml-1 mt-1 text-zinc-500 text-sm">
               For encrypted/TLS connections use{" "}
               <strong className="font-mono">2465</strong>,{" "}
               <strong className="font-mono">587</strong> or{" "}
@@ -51,14 +50,19 @@ export default function ExampleCard() {
             <TextWithCopyButton
               className="ml-1 rounded-lg mt-1 p-2 w-full bg-primary/10"
               value={user}
-            ></TextWithCopyButton>
+            />
           </div>
           <div>
             <strong>Password:</strong>
-            <TextWithCopyButton
-              className="ml-1 rounded-lg mt-1 p-2 w-full bg-primary/10"
-              value={"YOUR_API_KEY"}
-            ></TextWithCopyButton>
+            <p className="ml-1 mt-1 text-zinc-500 text-sm mb-2">
+              Use an API key as your SMTP password. Generate one below or use an
+              existing key from the API Keys tab.
+            </p>
+            <GenerateSmtpPassword
+              smtpHost={host}
+              smtpPort={port}
+              smtpUser={user}
+            />
           </div>
         </div>
       </CardContent>
